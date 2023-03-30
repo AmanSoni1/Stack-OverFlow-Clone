@@ -14,69 +14,14 @@ const QuestionDetails = () => {
 
 const { id } = useParams()
 const questionsList = useSelector(state => state.questionsReducer)
-    // console.log(questionsList)
-
-    // var questionsList = [{
-    //     _id: '1',
-    //     upVotes: 3,
-    //     downVotes: 2,
-    //     noOfAnswers: 2,
-    //     questionTitle: "What is a function?" ,
-    //     questionBody: "It meant to be" ,
-    //     questionTags: ["java", "node js", "react js", "mongoDB"],
-    //     userPosted: "mano" ,
-    //     userId: 1,
-    //     askedOn: "jan 1",
-    //     answer: [{
-    //           answerBody: "Answer",
-    //           userAnswered: 'kumar',
-    //           answeredOn: 'jan 2',
-    //           userId: 2
-    //     }]
-    //     },{
-    //     _id: '2',
-    //     upVotes: 3,
-    //     downVotes: 2,
-    //     noOfAnswers: 1,
-    //     questionTitle: "What is a Relation?",
-    //     questionBody: "It meant to be" ,
-    //     questionTags: ["javascript" ,"R", "python"],
-    //     userPosted: "mano",
-    //     userId: 2,
-    //     askedOn: "jan 2",
-    //     answer: [{
-    //       answerBody: "Answer From 2nd userID",
-    //       userAnswered: 'kumar',
-    //       answeredOn: 'jan 3',
-    //       userId: 2
-    // }]
-    //     },
-    //     {
-    //     _id: '3',
-    //     upVotes: 3,
-    //     downVotes: 2,
-    //     noOfAnswers: 1,
-    //     questionTitle: "Who are you?",
-    //     questionBody: "It meant to be",
-    //     questionTags: ["javascript", "python"] ,
-    //     userPosted: "mano",
-    //     userId: 3,
-    //     askedOn: "jan 3",
-    //     answer: [{
-    //       answerBody: "Answer from 3rd UserID",
-    //       userAnswered: 'kumar',
-    //       answeredOn: 'jan 4',
-    //       userId: 2
-    // }]
-    //     }
-    //     ]
+    
     const Navigate = useNavigate();
     const dispatch = useDispatch()
     const [Answer, setAnswer] = useState('')
     const User  = useSelector((state) => (state.currentUserReducer))
     const location = useLocation()
     // console.log(location)
-    const url = 'http://localhost:3000'
+    const url = 'https://stack-eq-overflow.onrender.com'
 
     const handlePostAns= (e, answerLength) => {
         e.preventDefault()
